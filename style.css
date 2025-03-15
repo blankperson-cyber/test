@@ -37,7 +37,7 @@ html {
 
 body {
     background-color: #f8f9fa;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     font-family: "Advent Pro", sans-serif !important;
 }
 
