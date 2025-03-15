@@ -126,7 +126,7 @@
     .mainsection {
         height: 75vh !important;
         align-items:flex-end !important;
-        justify-content: flex-end !important; 
+        justify-content: center !important; 
         text-align: left;
     }
     .mainsection::before {
