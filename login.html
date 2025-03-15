@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LISI | Login</title>
+  <link rel="stylesheet" href="loginsignupstyles.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100..900&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  <script src="loginsignupmain.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="Data/LOGO/LOGO MODERN1.png" alt="Logo">
+    </div>
+    <div class="goback">
+      <a href="index.html"><p><i class='bx bx-left-top-arrow-circle'></i>GO BACK</p></a>
+    </div>
+  </header>
+  
+  <div class="wrapper">
+    <div class="container">
+      <div class="login-section">
+        <h2>Login</h2>
+        <form action="#" method="POST">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Enter your username" required>
+          
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" required>
+          
+          <button type="submit">Sign In</button>
+          <a href="signup.html" class="signup-link">Don't have an account?<br>click here to Register</a>
+        </form>
+      </div>
+      <div class="notes-section">
+        <h2>Notes</h2>
+        <p>
+          Here you can add helpful notes for users such as password requirements, 
+          tips for account security, or other useful information.
+        </p>
+        <ul>
+          <li>Username must be unique.</li>
+          <li>Password should be at least 8 characters.</li>
+          <li>Keep your credentials safe!</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.body.classList.add("page-enter");
+    });
+    </script>
+</body>
+</html>

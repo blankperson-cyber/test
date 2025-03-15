@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LISI | Signup</title>
+  <link rel="stylesheet" href="loginsignupstyles.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  <script src="loginsignupmain.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="Data/LOGO/LOGO MODERN1.png" alt="Logo">
+    </div>
+    <div class="goback">
+      <a href="index.html"><p><i class='bx bx-left-top-arrow-circle'></i>GO BACK</p></a>
+    </div>
+  </header>
+  
+  <div class="wrapper">
+    <div class="container">
+      <div class="login-section">
+        <h2>Signup</h2>
+        <form action="#" method="POST">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" placeholder="Enter your full name" required>
+          
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+          
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Choose a username" required>
+          
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Create a password" required>
+          
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+          
+          <button type="submit">Sign Up</button>
+          <a href="login.html" class="loginlink">Already have an account?<br>Click here to Login</a>
+        </form>
+      </div>
+      <div class="notes-section">
+        <h2>Notes</h2>
+        <p>
+          Here you can add helpful notes for users such as password requirements, 
+          tips for account security, or other useful information.
+        </p>
+        <ul>
+          <li>Username must be unique.</li>
+          <li>Password should be at least 8 characters.</li>
+          <li>Email should be valid and active.</li>
+          <li>Keep your credentials safe!</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.body.classList.add("page-enter");
+    });
+    </script>
+</body>
+</html>

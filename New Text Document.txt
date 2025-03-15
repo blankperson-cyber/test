@@ -1,0 +1,248 @@
+nav {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    background: rgb(253, 253, 253);
+    display: flex;
+    flex-direction: row;
+    padding: 3rem;
+    align-items: center;
+    justify-content: center;
+    color: #2c6893;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100vh); 
+    transition: all 0.3s ease-in-out;
+}
+document.addEventListener("DOMContentLoaded", () => {
+  let btn_menu = document.getElementById('btn_menu');
+  let nav = document.getElementById('nav');
+  let btn_x = document.getElementById('btn_x');
+
+  btn_menu.addEventListener('click', () => {
+    setTimeout(() => {
+      nav.style.transform = 'translateY(0)'; 
+      nav.style.opacity = '1';
+      nav.style.visibility = 'visible';
+    }, 100); 
+  });
+
+  btn_x.addEventListener('click', () => {
+    setTimeout(() => {
+      nav.style.transform = 'translateY(-100vh)';
+      nav.style.opacity = '0';
+      nav.style.visibility = 'hidden';
+    }, 100);
+  });
+});
+
+
+nav .navmenu li {
+    display: flex;
+    padding: 1rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const slider = document.querySelector(".news-slider");
+  const newsItems = document.querySelectorAll(".news-item");
+  const prevBtn = document.querySelector(".prev-btn");
+  const nextBtn = document.querySelector(".next-btn");
+
+  let currentIndex = 0; // Start from the first card on the left
+  const gap = 20; // Space between items
+
+  function updateSlider(initial = false) {
+    const itemWidth = newsItems[0].offsetWidth + gap;
+    const offset = -currentIndex * itemWidth;
+
+    if (initial) {
+        slider.style.transition = "none"; // Disable animation for first load
+    } else {
+        slider.style.transition = "transform 0.5s ease-in-out"; // Enable animation for user clicks
+    }
+
+    slider.style.transform = `translateX(${offset}px)`;
+
+    newsItems.forEach((item, index) => {
+        item.classList.remove("active", "no-hover");
+        if (index === currentIndex) {
+            item.classList.add("active", "no-hover");
+        }
+    });
+
+    if (initial) {
+        setTimeout(() => {
+            slider.style.transition = "transform 0.5s ease-in-out"; // Restore animation
+        }, 50);
+    }
+}
+
+
+  function nextSlide() {
+    if (currentIndex < newsItems.length - 1) {
+      currentIndex++;
+    } else {
+      currentIndex = 0; // Loop back to first card
+    }
+    updateSlider();
+  }
+
+  function prevSlide() {
+    if (currentIndex > 0) {
+      currentIndex--;
+    } else {
+      currentIndex = newsItems.length - 1; // Loop to last card
+    }
+    updateSlider();
+  }
+
+  prevBtn.addEventListener("click", prevSlide);
+  nextBtn.addEventListener("click", nextSlide);
+
+  window.addEventListener("resize", updateSlider); // Recalculate position on window resize
+
+  updateSlider(true); // Initial positioning
+});
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  let btn_menu = document.getElementById('btn_menu');
+  let nav = document.getElementById('nav');
+  let btn_x = document.getElementById('btn_x');
+
+  btn_menu.addEventListener('click', () => {
+    setTimeout(() => {
+      nav.style.transform = 'translateY(0)';
+      nav.style.opacity = '1';
+      nav.style.visibility = 'visible';
+    }, 100);
+  });
+
+  btn_x.addEventListener('click', () => {
+    setTimeout(() => {
+      nav.style.transform = 'translateY(-100vh)';
+      nav.style.opacity = '0';
+      nav.style.visibility = 'hidden';
+    }, 100);
+  });
+});
+
+
+
+
+
+
+
+@keyframes movingBlurGradient {
+    0% {
+        background-position: 0% 50%;
+        
+    }
+    50% {
+        background-position: 100% 50%;
+       
+    }
+    100% {
+        background-position: 0% 50%;
+       
+    }
+}
+
+
+.mainsection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(90deg, rgb(33, 78, 122), rgb(20, 146, 184), rgb(48, 75, 213));
+    background-size: 200% 200%;
+    animation: movingBlurGradient 8s infinite alternate ease-in-out;
+    transition: background 2s ease-in-out, filter 2s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="mainsection">
+        <p>
+            <span>Welcome To Abdlhafid Boussouf University Center</span>
+           <span> Laboratory of Intelligent Systems and Informatics</span>  
+           <span>LISI</span>
+            
+         </p>
+        <div class="explor">
+            <label>explor More <i class='bx bx-down-arrow-circle'></i></label>
+        </div>
+    </section>
+
+
+    .mainsection {
+    position: relative;
+    background-image: url('Data/other/main.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50vh;
+    animation: sliding 30s ease-in-out infinite;
+    transition: background-image 0.60s ease-in-out;
+    z-index: 0;
+    padding: 5rem;
+}
+
+.mainsection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    background: linear-gradient(90.00deg, rgba(39, 91, 129, 0.77) 0%, rgba(255, 255, 255, 0.13) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+.mainsection p span {
+    display: block;
+    font-weight: 600;
+    position: relative;
+    color: rgb(245, 252, 255);
+    letter-spacing: 1px;
+    font-size: 3.6rem;
+    letter-spacing: 3px;
+    text-align: left;
+    width: 100%;
+    z-index: 2;
+    text-shadow: 0px 4px 10px rgba(255, 255, 255, 0.5);
+    animation: float 3s ease-in-out infinite;
+}
+
+.mainsection p span:nth-child(1) { max-width: 100%; } /* First line (widest) */
+.mainsection p span:nth-child(2) { max-width: 70%; }  /* Second line (shorter) */
+.mainsection p span:nth-child(3) { max-width: 40%; }  /* Third line (shortest) */
