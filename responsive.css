@@ -295,10 +295,6 @@
     .mainsection::before {
         height: 70vh;
     }
-    .news-wrapper { 
-        width: 90%;
-    }
-    
     .news-item {
         height: 100vh;
     }
