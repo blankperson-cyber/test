@@ -104,13 +104,12 @@
         transform: scale(1.03);
     }
 
-    /* Make menu visible when active */
     .menu-active .menu {
         display: block;
         opacity: 1;
         transform: translateY(0);
     }
-    /* Hide header elements on mobile */
+
     header .location,
     header .login {
         display: none;
@@ -138,36 +137,61 @@
     line-height: 1.5 !important;
     letter-spacing: 0.6rem !important;
     }
-    .news-item{
-        height: auto;
+   
+    .firstsection h1 {
+        font-size:1.8rem;
+        letter-spacing: 2px;
     }
-    .news-item.active{
-        height: 100vh;
+    
+    .firstsection .Discription {
+        font-size: 1rem;
+    }
+  
+    .news-item{
+        width: 75vw !important;
+        height: 80vh !important;
+    }
+    .news-item.active {
+        width: 75vw !important;
+        height: 80vh !important;
     }
     .nav-btn{
         opacity: 0.6;
     }
     .labs-container {
-        gap: 1rem;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1.5rem !important; /* Adds space between items */
+        height: auto !important; /* Fixes items getting stuck */
+        overflow: visible !important;
     }
 
     .labs-item {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-
+        width: 100% !important;
+        max-width: 400px !important; /* Prevents excessive width */
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        background: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        position: relative !important; /* Prevents stacking issues */
     }
 
     .labs-item img {
-        height: 160px; 
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px 8px 0 0;
     }
 
     .labs-content {
-        flex-grow: 1; 
+        width: 100%;
+        text-align: center;
         padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
     }
         .teams_title {
             font-size: 2rem;
@@ -197,9 +221,7 @@
         .team-content {
             font-size: 1.2rem;
         }
-        .whitelogo img{
-            display: none;
-        }
+       
         .footer-top {
             flex-direction: column;
             align-items: center;
@@ -369,28 +391,7 @@
     .nav-btn{
         opacity: 0.6;
     }
-    .labs-container {
-        gap: 1rem;
-    }
-
-    .labs-item {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-
-        display: flex;
-        flex-direction: column;
-    }
-
-    .labs-item img {
-        height: 160px; 
-    }
-
-    .labs-content {
-        flex-grow: 1; 
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+    
         .teams_title {
             font-size: 2rem;
             margin-bottom: 20px;
