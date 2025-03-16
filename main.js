@@ -1,4 +1,3 @@
-// ✅ LOADING SCREEN LOGIC
 window.addEventListener('load', function () {
   let loadingScreen = document.getElementById('loading-screen');
   let siteContent = document.querySelector('.site-content');
@@ -97,17 +96,35 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // ✅ NAVIGATION ANIMATION ON SCROLL
-let lastScrollTop = 0;
+let lastScrollTop = 0; // ✅ Keep only this one
+
 window.addEventListener("scroll", function () {
-  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-  if (currentScroll > lastScrollTop) {
-      document.documentElement.style.setProperty('--appear-state', 'running'); // Scrolling Down
-  } else {
-      document.documentElement.style.setProperty('--appear-state', 'paused'); // Scrolling Up
-  }
+    if (currentScroll > lastScrollTop) {
+        document.documentElement.style.setProperty('--appear-state', 'running'); // Scrolling Down
+    } else {
+        document.documentElement.style.setProperty('--appear-state', 'paused'); // Scrolling Up
+    }
 
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});
+
+// ✅ NAVIGATION ANIMATION ON SCROLL on all devices
+gsap.registerPlugin(ScrollTrigger);
+document.querySelectorAll("section, .news-section, .labs-section, .labs-item, .teams-list").forEach((section) => {
+    gsap.from(section, {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: section,
+            start: "top 80%", 
+            end: "top 40%",   
+            toggleActions: "play none none reverse",
+        }
+    });
 });
 
 // ✅ NEWS SLIDER FUNCTIONALITY
@@ -252,3 +269,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+console.log(document.querySelectorAll('.labs-content'));

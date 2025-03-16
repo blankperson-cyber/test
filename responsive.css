@@ -1,17 +1,6 @@
 
 @media (max-width: 768px) {
-    @supports (animation-timeline: view()) {
-        .news-section,
-        .firstsection .title,
-        .firstsection .Discription ,
-        .news-section,
-        .labs-section,
-        .labs-item,
-        .team-item{
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
-        }
-    }
+  
     header {
        position: sticky;
        top: 0;
@@ -136,14 +125,12 @@
     }
 
     .mainsection {
-        height: 75vh !important;
+       
         align-items:flex-end !important;
         justify-content:center !important; 
         text-align: left;
     }
-    .mainsection::before {
-        height: 75vh !important;
-    }
+   
     .mainsection p{
         font-size: 6rem !important;
     line-height: 1.5 !important;

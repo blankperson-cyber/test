@@ -600,15 +600,7 @@ section {
         background-image: url('Data/other/main6.jpg');
     }
 }
-@keyframes appear{
-    from{
-        opacity: 0;
-        scale: 0.4;
-    }to{
-        opacity: 1;
-        scale: 1;
-    }
-}
+
 .firstsection {
     display: flex;
     align-items: center;
@@ -640,9 +632,8 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: scrollPattern 10s linear infinite,appear .5s linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+    animation: scrollPattern 10s linear infinite;
+  
 
 }
 
@@ -662,9 +653,8 @@ section {
     font-weight: 600;
     line-height: 2;
     letter-spacing: 2px;
-    animation: scrollPattern 10s linear infinite,appear .5s linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+    animation: scrollPattern 10s linear infinite;
+   
 }
 
 .news-section {
@@ -676,9 +666,7 @@ section {
     align-items: center;
     padding: 1rem;
     background-color: #f8f9fa;
-    animation: appear .5s linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+  
 }
 
 .news-header {
@@ -824,9 +812,7 @@ section {
     padding: 2.5rem;
     background-color: #f8f9fa;
     text-align: center;
-    animation: scrollPattern 10s linear infinite,appear .5s linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+    animation: scrollPattern 10s linear infinite;
     height: auto !important;
     overflow: visible !important;
 }
@@ -857,9 +843,7 @@ section {
     overflow: visible !important;
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-    animation: scrollPattern 10s linear infinite,appear .5s linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+    animation: scrollPattern 10s linear infinite;
 }
 
 .labs-item:hover {
@@ -986,9 +970,8 @@ section {
     overflow: hidden;
     background: white;
     transition: all .3s ease-in-out;
-    animation: scrollPattern 10s linear infinite,appear .5s linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+    animation: scrollPattern 10s linear infinite;
+   
 }
 
 
@@ -1063,9 +1046,7 @@ font-weight: 700;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    animation: scrollPattern 10s linear infinite,appear .5s linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 00%;
+    animation: scrollPattern 10s linear infinite;
     transition: all .3s ease-in-out;
 }
 .footer:hover{
