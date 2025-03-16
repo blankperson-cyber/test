@@ -1,5 +1,17 @@
 
 @media (max-width: 768px) {
+    @supports (animation-timeline: view()) {
+        .news-section,
+        .firstsection .title,
+        .firstsection .Discription ,
+        .news-section,
+        .labs-section,
+        .labs-item,
+        .team-item{
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+        }
+    }
     header {
        position: sticky;
        top: 0;
