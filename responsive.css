@@ -1,6 +1,5 @@
 
 @media (max-width: 768px) {
-  
     header {
        position: sticky;
        top: 0;
@@ -91,12 +90,6 @@
         text-align: center;
     }
 
-    .mobile-nav .menu ul a{
-        text-decoration: none;
-        color: #24577b;
-
-    }
-
     .mobile-nav .menu ul li {
         padding: 20px;
         border-bottom: 2px dashed #a7b1b7;
@@ -131,12 +124,14 @@
     }
 
     .mainsection {
-       
+        height: 75vh !important;
         align-items:flex-end !important;
         justify-content:center !important; 
         text-align: left;
     }
-   
+    .mainsection::before {
+        height: 75vh !important;
+    }
     .mainsection p{
         font-size: 6rem !important;
     line-height: 1.5 !important;
@@ -247,87 +242,9 @@
             flex-direction: column;
             gap: 10px;
         }
-        /*about page*/
-        .about-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-    
-        .about-container .title,
-        .about-container .Discription,
-        .about-container .mission,
-        .about-container .research {
-            grid-column: span 1;
-            width: 100%;
-            padding: 1.5rem;
-        }
-    
-        .about-container h1,
-        .about-container h2 {
-            font-size: 2.5rem;
-        }
-    
-        .about-container p,
-        .about-container ul {
-            font-size: 1.8rem;
-        }
-        /*login/signup pages */
-        header .goback {
-            font-size: 1rem;
-          }
-        .container {
-            flex-direction: column;
-            min-height: auto;
-          }
-        
-          .login-section, .notes-section {
-            padding: 2rem;
-            border-right: n
-    }
-    /*team page*/
-    .team-page {
-        padding: 40px 20px;
-        gap: 30px;
-    }
-    
-    .team-general-about {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+
     }
 
-    .team-general, .team-description, .team-goals, .team-members {
-        padding: 30px;
-        text-align: center;
-        border-radius: 15px;
-    }
-
-    .team-general h2, .team-description h3, .team-goals h3, .team-members h2 {
-        font-size: 2.8rem;
-        margin-bottom: 20px;
-    }
-
-    .team-members {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .member-item {
-        flex-direction: column;
-        text-align: center;
-        padding: 25px;
-    }
-
-    .photo {
-        width: 140px;
-        height: 140px;
-        margin-bottom: 15px;
-    }
-}
 
 @media (max-width: 1170px) {
     header {
@@ -503,8 +420,29 @@
         .team-content {
             font-size: 1.2rem;
         }
-        
-        
+        .whitelogo img{
+            display: none;
+        }
+        .footer-top {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    
+        .footer-columns {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+    
+        .footer-column {
+            text-align: center;
+        }
+    
+        .footer-bottom {
+            flex-direction: column;
+            gap: 10px;
+        }
 
     }
 
@@ -929,17 +867,4 @@
         font-size: 1.5rem;
     }
 
-    .team-members {
-        grid-template-columns: 1fr;
-    }
-    
-    .member-item {
-        width: 100%;
-    }
-    header .goback a button {
-        padding: 1rem 3.2rem;
-        font-size: 1.6rem;
-        font-weight: 600;
-
-    }
 }
