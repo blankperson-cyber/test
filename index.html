@@ -56,19 +56,32 @@
             <a href="login.html" class="loginlink"> <button>LOGIN <i class='bx bx-user-circle'></i></button></a>
         </div>
 
-        <div class="mobile-nav" >
-            <div class="menu-open-close"> 
-                <i id="menuicon"  class='bx bx-menu-alt-right'></i>
+        <div class="mobile-nav">
+            <div class="menu-open-close">
+                <i id="menuicon" class='bx bx-menu-alt-right'></i>
             </div>
             <div class="menu" id="menu">
-                <i id="xicon" class='bx bx-x' ></i>
+                <i id="xicon" class='bx bx-x'></i>
                 <ul>
-                    <li>HOME</li>
-                    <li>ABOUT</li>
-                    <li>TEAMS</li>
-                    <li>Dissemination</li>
-                    <li>Conventions</li>
-                    <li>Other Activities</li>
+                    <a href="index.html">
+                        <li>HOME</li>
+                    </a>
+                    <a href="about.html">
+                        <li>ABOUT</li>
+                    </a>
+                    <a href="about.html">
+                        <li>TEAMS</li>
+                    </a>
+
+                    <a href="about.html">
+                        <li>Dissemination</li>
+                    </a>
+                    <a href="about.html">
+                        <li>Conventions</li>
+                    </a>
+                    <a href="about.html">
+                        <li>Other Activities</li>
+                    </a>
                     <li>Search</li>
                     <li>Language</li>
                 </ul>
@@ -85,7 +98,7 @@
                 <ul class="dropdown-menu">
                     <li class="dropdownsub"><a href="#">Team <span>►</span></a>
                         <ul class="dropdown-submenu">
-                            <li><a href="team.html#team-general" >Discription</a></li>
+                            <li><a href="team.html#team-general">Discription</a></li>
                             <li><a href="team.html#team-goals">Goels</a></li>
                             <li><a href="team.html#team-members">Members</a></li>
                         </ul>
@@ -149,7 +162,7 @@
     <section class="mainsection">
         <p>
             Welcome To LISI
-         </p>
+        </p>
         <div class="explor">
             <label>Explor More <i class='bx bx-down-arrow-circle'></i></label>
         </div>
@@ -170,7 +183,7 @@
     <div id="news-section" class="news-section">
         <div id="news" class="news-header">Latest News</div>
         <div class="news-container">
-            <button class="nav-btn prev-btn"><i class='bx bxs-left-arrow' ></i></button>
+            <button class="nav-btn prev-btn"><i class='bx bxs-left-arrow'></i></button>
             <div class="news-wrapper">
                 <div class="news-slider">
                     <article class="news-item" data-index="0">
@@ -259,7 +272,7 @@
     </div>
 
     <div id="teams-container" class="teams-container">
-        <div  class="teams_title">Our Teams</div>
+        <div class="teams_title">Our Teams</div>
         <div class="team-box" id="team-container">
             <div id="team-selection">
                 <div class="teams-list">
@@ -272,7 +285,7 @@
                             <p class="team-date">Created on: January 15, 2024</p>
                         </div>
                     </label>
-    
+
                     <label class="team-item">
                         <input type="radio" name="team" value="OPTIMA" data-name="OPTIMA" data-date="2023-11-20"
                             data-description="Experts in Web and Mobile Apps." data-link="team_beta.html">
@@ -284,11 +297,11 @@
                     </label>
                 </div>
             </div>
-    
+
             <button class="action-button" id="confirm-btn" onclick="showTeamInfo()" disabled>Show Details</button>
         </div>
     </div>
-    
+
 
     <!-- FOOTER -->
     <div class="footer_container" id="footer">
@@ -341,12 +354,12 @@
             </div>
         </footer>
     </div>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="main.js"></script>
-    
-    
+
+
 </body>
 
 </html>

@@ -52,7 +52,7 @@ body::before {
 }
 header {
   width: 100%;
-  padding: 2rem 4rem 2rem 6rem;
+  padding: 2rem 4rem 5rem 6rem;
   background: #ffffff;
   display: flex;
   align-items: center;
@@ -61,8 +61,8 @@ header {
 }
 
 header .logo img {
-  width: 25rem;
-  height: 6rem;
+  width:16em;
+  height: 4rem;
   transform: scale(1.25);
 }
 

@@ -4,19 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="pagetitle">LISI | Teams</title>
+    <title>LISI | Home</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="teamstyle.css">
+    <link rel="stylesheet" href="responsive.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=widgets" />
-    <link rel="preload" as="fetch" href="Data/other/main.jpg">
-    <link rel="preload" as="fetch" href="Data/other/main.png">
-    <link rel="preload" as="fetch" href="Data/other/main3.jpg">
-    <link rel="preload" as="fetch" href="Data/other/main4.jpg">
-    <link rel="preload" as="fetch" href="Data/other/main5.jpg">
-    <link rel="preload" as="fetch" href="Data/other/main6.jpg">
-    <script src="team.js"></script>
+    <link rel="preload" as="Image" href="Data/other/main.jpg">
 </head>
 
 <body>
@@ -61,6 +56,38 @@
         <div class="login">
             <a href="login.html" class="loginlink"> <button>LOGIN <i class='bx bx-user-circle'></i></button></a>
         </div>
+
+        <div class="mobile-nav" >
+            <div class="menu-open-close"> 
+                <i id="menuicon"  class='bx bx-menu-alt-right'></i>
+            </div>
+            <div class="menu" id="menu">
+                <i id="xicon" class='bx bx-x' ></i>
+                <ul>
+                    <a href="index.html">
+                        <li>HOME</li>
+                    </a>
+                    <a href="about.html">
+                        <li>ABOUT</li>
+                    </a>
+                    <a href="about.html">
+                        <li>TEAMS</li>
+                    </a>
+
+                    <a href="about.html">
+                        <li>Dissemination</li>
+                    </a>
+                    <a href="about.html">
+                        <li>Conventions</li>
+                    </a>
+                    <a href="about.html">
+                        <li>Other Activities</li>
+                    </a>
+                    <li>Search</li>
+                    <li>Language</li>
+                </ul>
+            </div>
+        </div>
     </header>
     <!--Navigation menu-->
     <nav>
@@ -72,9 +99,9 @@
                 <ul class="dropdown-menu">
                     <li class="dropdownsub"><a href="#">Team <span>►</span></a>
                         <ul class="dropdown-submenu">
-                            <li><a href="#"> Discription</a></li>
-                            <li><a href="#">Goels</a></li>
-                            <li><a href="#">Members</a></li>
+                            <li><a href="team.html#team-general" >Discription</a></li>
+                            <li><a href="team.html#team-goals">Goels</a></li>
+                            <li><a href="team.html#team-members">Members</a></li>
                         </ul>
                     </li>
                     <li class="dropdownsub"><a href="#">Team <span>►</span></a>
@@ -124,11 +151,11 @@
             </li>
             <li class="dropdown"><a href="#">Quick Access</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#"><i class='bx bxs-book-bookmark'></i> Discription </a></li>
-                    <li><a href="#"><i class='bx bxs-group'></i> Teams</a></li>
+                    <li><a href="#firstsection"><i class='bx bxs-book-bookmark'></i> Discription </a></li>
+                    <li><a href="#news-section"><i class='bx bx-news'></i> News</a></li>
                     <li><a href="#current-labs"><i class='bx bxs-component'></i> Labs</a></li>
-                    <li><a href="#"> <i class='bx bx-code-alt'></i> Credits</a></li>
-                    <li><a href="#"><i class='bx bxs-contact'></i> Contacts</a></li>
+                    <li><a href="#teams-container"><i class='bx bxs-group'></i> Teams</a></li>
+                    <li><a href="#footer"><i class='bx bxs-contact'></i> Contacts</a></li>
                 </ul>
             </li>
         </ul>
@@ -248,7 +275,7 @@
             </div>
         </footer>
     </div>
-
+<script src="team.js"></script>
     
 </body>
 

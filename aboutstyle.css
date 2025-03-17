@@ -186,23 +186,3 @@
     margin-right: 0.5rem;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .about-container {
-        grid-template-columns: 1fr; /* Stack everything in one column */
-        padding: 2rem;
-    }
-
-    .about-container h1 {
-        font-size: 2rem;
-    }
-
-    .about-container h2 {
-        font-size: 1.6rem;
-    }
-
-    .about-container p,
-    .about-container ul {
-        font-size: 1.1rem;
-    }
-}
