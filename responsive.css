@@ -88,7 +88,7 @@
         list-style: none;
         padding: 0;
         margin: 50px 0 0 0;
-        text-align: center;
+        text-align: center !important;
     }
 
     .mobile-nav .menu ul a{
@@ -110,7 +110,7 @@
         background: #E5EEF2;
         transform: scale(1.03);
     }
-
+  
     .menu-active .menu {
         display: block;
         opacity: 1;
@@ -445,20 +445,31 @@
         margin: 50px 0 0 0;
         text-align: center;
     }
-    .mobile-nav .menu ul a{
+    .mobile-nav .menu ul li a {
         text-decoration: none;
         color: #24577b;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start; /* Align text to the right */
+        align-items: center;
+        gap: 15px; /* Space between icon and text */
     }
-
+    
+    .mobile-nav .menu ul li i {
+        font-size: 22px;
+        margin-right: auto; /* Pushes text to the right */
+    }
     .mobile-nav .menu ul li {
-        padding: 20px;
+        display: flex;
+        justify-content: space-between; /* Creates wide space between icon & text */
+        align-items: center;
+        padding: 15px 20px;
         border-bottom: 2px dashed #a7b1b7;
         cursor: pointer;
         font-size: 20px;
         font-weight: 700;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
     }
-
     .mobile-nav .menu ul li:hover {
         background: #E5EEF2;
         transform: scale(1.03);

@@ -39,15 +39,17 @@
             </div>
             <!-- Search Box -->
             <div class="searchbox">
-                <input type="search" name="search" placeholder="Search For Anything...">
+                <input type="search" id="searchInput" placeholder="Search For Anything...">
                 <i class='bx bx-search-alt'></i>
             </div>
+            <div id="searchResults"></div> <!-- This will show the results -->
+
         </div>
     </div>
     <!--Header Menu-->
     <header>
         <div class="logo">
-           <a href="index.html"><img src="Data/LOGO/LOGO MODERN1.png"></a> 
+            <a href="index.html"><img src="Data/LOGO/LOGO MODERN1.png"></a>
         </div>
         <div class="location">
             <p>LISI Laboratory <br>N79, MILA</br></p>
@@ -63,28 +65,15 @@
             <div class="menu" id="menu">
                 <i id="xicon" class='bx bx-x'></i>
                 <ul>
-                    <a href="index.html">
-                        <li>HOME</li>
-                    </a>
-                    <a href="about.html">
-                        <li>ABOUT</li>
-                    </a>
-                    <a href="about.html">
-                        <li>TEAMS</li>
-                    </a>
-
-                    <a href="about.html">
-                        <li>Dissemination</li>
-                    </a>
-                    <a href="about.html">
-                        <li>Conventions</li>
-                    </a>
-                    <a href="about.html">
-                        <li>Other Activities</li>
-                    </a>
-                    <li>Search</li>
-                    <li>Language</li>
-                    <a href="login.html"><li>Login</li></a>
+                    <li><a href="index.html"><i class='bx bx-arrow-back'></i> HOME</a></li>
+                    <li><a href="about.html"><i class='bx bx-arrow-back'></i> ABOUT</a></li>
+                    <li><a href="#teams-container"><i class='bx bx-arrow-back'></i> TEAMS</a></li>
+                    <li><a href="dissemination.html"><i class='bx bx-arrow-back'></i> DISSEMINATION</a></li>
+                    <li><a href="conventions.html"><i class='bx bx-arrow-back'></i> CONVENTIONS</a></li>
+                    <li><a href="activities.html"><i class='bx bx-arrow-back'></i> OTHER ACTIVITIES</a></li>
+                    <li><a href="#"><i class='bx bx-search'></i> Search</a></li>
+                    <li><a href="#"><i class='bx bx-globe'></i> Language</a></li>
+                    <li><a href="login.html"><i class='bx bx-log-in'></i> LOGIN</a></li>
                 </ul>
             </div>
         </div>
@@ -97,7 +86,7 @@
             <li class="dropdown">
                 <a href="#teams-container">Teams <span>▼</span></a>
                 <ul class="dropdown-menu">
-                    <li class="dropdownsub"><a href="#">Team <span>►</span></a>
+                    <li class="dropdownsub"><a href="#">Optima <span>►</span></a>
                         <ul class="dropdown-submenu">
                             <li><a href="team.html#team-general">Discription</a></li>
                             <li><a href="team.html#team-goals">Goels</a></li>
@@ -168,11 +157,12 @@
             <label>Explor More <i class='bx bx-down-arrow-circle'></i></label>
         </div>
     </section>
-    <section id="firstsection" class="firstsection">
+
+    <section class="firstsection">
         <div class="title">
             <h1>Laboratory of Intelligent Systems and Informatics :</h1>
         </div>
-        <div class="Discription">
+        <div class="Discription" id="firstsection">
             <p>LISI is a research lab at Centre Universitaire Abdelhafid Boussouf de Mila, dedicated to AI, IoT, and
                 Optimization. Our teams focus on intelligent systems, machine learning, network security, and smart
                 technologies, driving innovation in fields like healthcare, agriculture, and smart cities through
@@ -181,7 +171,7 @@
 
     </section>
 
-    <div id="news-section" class="news-section">
+    <section id="news-section" class="news-section">
         <div id="news" class="news-header">Latest News</div>
         <div class="news-container">
             <button class="nav-btn prev-btn"><i class='bx bxs-left-arrow'></i></button>
@@ -226,7 +216,8 @@
             </div>
             <button class="nav-btn next-btn"><i class='bx bxs-right-arrow'></i></button>
         </div>
-    </div>
+    </section>
+
     <div id="current-labs" class="labs-section">
         <h2 class="labs-title">Our Labs</h2>
         <div class="labs-container">
@@ -290,7 +281,7 @@
                     <label class="team-item">
                         <input type="radio" name="team" value="OPTIMA" data-name="OPTIMA" data-date="2023-11-20"
                             data-description="Experts in Web and Mobile Apps." data-link="team_beta.html">
-                        <img src="Data/news/what-is-the-internet-of-things-iot.png" alt="Team Beta">
+                        <img src="Data/other/ai-news-lead.jpg" alt="Team Beta">
                         <div class="team-content">
                             <span class="team-name">Team OPTIMA</span>
                             <p class="team-date">Created on: November 20, 2023</p>
@@ -305,7 +296,7 @@
 
 
     <!-- FOOTER -->
-    <div class="footer_container" id="footer">
+    <footer class="footer_container" id="footer">
         <footer class="footer">
             <div class="footer-content">
                 <div class="footer-top">
@@ -354,7 +345,7 @@
                 </div>
             </div>
         </footer>
-    </div>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>

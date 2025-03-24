@@ -14,6 +14,126 @@ window.addEventListener('load', function () {
   }, 500);
 });
 
+
+// search bar function
+document.addEventListener("DOMContentLoaded", async function () {
+  const searchInput = document.getElementById("searchInput");
+  const resultsDiv = document.getElementById("searchResults");
+
+  if (!searchInput) {
+      console.error("🚨 ERROR: Search input not found!");
+      return;
+  }
+
+  console.log("✅ Search input found!");
+
+  // List of pages to search
+  const pages = ["index.html", "about.html", "team.html"];
+
+  async function fetchPageContent(url) {
+      try {
+          console.log(`Fetching: ${url}`);
+          const response = await fetch(url);
+          const text = await response.text();
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(text, "text/html");
+
+          let pageTitle = doc.querySelector("title") ? doc.querySelector("title").innerText : "Unknown Title";
+          let pageContent = doc.body.innerText.toLowerCase();
+
+          console.log(`✅ Loaded ${url} | Title: ${pageTitle}`);
+
+          let sections = [...doc.querySelectorAll("h2, h3, p")];
+
+          return {
+              url,
+              title: pageTitle.trim(),
+              content: pageContent,
+              sections: sections.map(section => ({
+                  text: section.innerText.toLowerCase(),
+                  id: section.id || section.textContent.slice(0, 20).replace(/\s+/g, "-")
+              }))
+          };
+      } catch (error) {
+          console.error(`❌ Failed to fetch ${url}:`, error);
+          return null;
+      }
+  }
+
+  let siteData = await Promise.all(pages.map(fetchPageContent));
+  siteData = siteData.filter(page => page !== null);
+
+  searchInput.addEventListener("input", function () {
+      let query = this.value.toLowerCase();
+      resultsDiv.innerHTML = "";
+
+      if (query.length > 1) {
+          let results = [];
+
+          siteData.forEach(page => {
+              page.sections.forEach(section => {
+                  if (section.text.includes(query)) {
+                      results.push({
+                          url: `${page.url}#${section.id}`,
+                          title: `${page.title} - ${section.text.substring(0, 30)}...`
+                      });
+                  }
+              });
+          });
+
+          if (results.length > 0) {
+              results.forEach(result => {
+                  let resultItem = document.createElement("p");
+                  let link = document.createElement("a");
+
+                  link.href = result.url;
+                  link.textContent = result.title;
+                  link.setAttribute("target", "_self");
+
+                  resultItem.appendChild(link);
+                  resultsDiv.appendChild(resultItem);
+              });
+
+              resultsDiv.classList.remove("hide");
+              resultsDiv.classList.add("show");
+              resultsDiv.style.display = "block";
+          } else {
+              resultsDiv.innerHTML = "<p>No results found</p>";
+              resultsDiv.classList.remove("hide");
+              resultsDiv.classList.add("show");
+              resultsDiv.style.display = "block";
+          }
+      } else {
+          resultsDiv.classList.remove("show");
+          resultsDiv.classList.add("hide");
+
+          setTimeout(() => {
+              resultsDiv.style.display = "none";
+          }, 200);
+      }
+  });
+
+  document.addEventListener("click", function (event) {
+      if (!searchInput.contains(event.target) && !resultsDiv.contains(event.target)) {
+          resultsDiv.classList.remove("show");
+          resultsDiv.classList.add("hide");
+
+          setTimeout(() => {
+              resultsDiv.style.display = "none";
+          }, 200);
+      }
+  });
+
+  if (window.location.hash) {
+      let targetElement = document.querySelector(window.location.hash);
+      if (targetElement) {
+          setTimeout(() => {
+              targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+          }, 500);
+      }
+  }
+});
+
 // ✅ LOGIN PAGE TRANSITION
 document.addEventListener("DOMContentLoaded", function () {
   let loginLink = document.querySelector(".loginlink");
@@ -112,7 +232,7 @@ window.addEventListener("scroll", function () {
 
 // ✅ NAVIGATION ANIMATION ON SCROLL on all devices
 gsap.registerPlugin(ScrollTrigger);
-document.querySelectorAll("section, .news-section, .labs-section, .labs-item, .teams-list").forEach((section) => {
+document.querySelectorAll("section, .news-section, .labs-section, .labs-item, .teams-list,Discription ").forEach((section) => {
     gsap.from(section, {
         opacity: 0,
         y: 50,
